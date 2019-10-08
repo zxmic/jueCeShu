@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>upload</title>
+    <style>
+        .main_container{
+            width: 760px;
+            height: auto;
+            margin: auto;
+            padding-top: 10%;
+        }
+        .picture{
+            width: auto;
+            height: auto;
+            margin: auto;
+        }
+
+
+
+        table {margin: auto;height: auto}
+        body{
+            text-align: center;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+    </style>
+</head>
+<body >
+
+<div class="main_container">
+    <h3>请上传txt文件，每个参数用 "," 隔开。</h3>
+
+    <!--div class="picture">
+        <img src="image_example.png" width="35%" height="35%">
+    </div-->
+    <div class="but">
+        <form action='http://localhost:9090/file/upload' method='post' enctype='multipart/form-data'>
+            选择训练数据文件：&nbsp<input type='file' name='filedata'><br>
+            选择测试数据文件：<input type='file' name='filetest'><br>
+            <button type='submit'>上传</button>
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

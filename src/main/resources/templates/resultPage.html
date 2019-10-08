@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>resultPage</title>
+    <style>
+        body{
+            text-align: center;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+    </style>
+    <script>
+        $("#test").click(function(){
+            $.ajax({
+                url:"function01/Getdata",
+                type: "post",
+                async: false,
+                dataType:"String",
+                success:function(data){
+                    eval(data);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+树的页面
+</body>
+</html>

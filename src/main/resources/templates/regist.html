@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <style>
+        .main_container{
+            width: 760px;
+            height: auto;
+            margin: auto;
+            padding-top: 10%;
+        }
+
+
+        table {margin: auto;height: auto}
+        body{text-align: center}
+
+
+    </style>
+    <script>
+        function jump(){
+            window.location.href="/login.html";
+        }
+    </script>
+</head>
+<body background="image3.jpg" style="background-repeat: no-repeat;background-size: 100% 100%;background-attachment: fixed">
+
+
+<div class="main_container">
+
+    <div >
+        <h3>欢迎注册</h3>
+
+    </div>
+    <div>
+        <form action="/user/regist" method="post">
+            用户名:<input name="username" type="text" style="width: 200px;height:25px;border-radius: 10px;color: aqua;"  maxlength="20" minlength="1"/><br>
+            密&nbsp&nbsp码:<input name="password" type="password" style="width: 200px;height:25px;border-radius: 10px;color: aqua;"  maxlength="20" minlength="1"> <br>
+            <input type="submit" value="注册">
+            <input type="button" value="返回登录" onclick=javascrtpt:jump()>
+        </form>
+    </div>
+
+
+</div>
+
+</body>

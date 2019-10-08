@@ -1,0 +1,31 @@
+server:
+  port: 9090
+  context-path: /curd
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/weixx?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: zx
+    password: 778899
+
+  #禁用缓存 ctrl+f9重新编译即可实时刷新页面
+  thymeleaf:
+    cache: false
+
+
+  mvc:
+    static-path-pattern: /**
+  messages:
+    beanname: il8n.login
+  resources:
+    static-locations: classpath:/templates  #访问静态页面
+  #使用使用Redis缓存session数据
+  #session:
+  #  store-type: REDIS
+  #  #Redis服务器地址
+  #  redis:
+  #    host: 127.0.0.1
+  #  #Redis服务器端口号
+  #  redis:
+  #    port: 6379
+

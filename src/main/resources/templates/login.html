@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <style>
+        .main_container{
+            width: 760px;
+            height: auto;
+            margin: auto;
+            padding-top: 10%;
+        }
+
+
+        table {margin: auto;height: auto}
+        body{
+            text-align: center;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+
+    </style>
+    <script>
+        function jump(){
+            window.location.href="/regist.html";
+        }
+    </script>
+</head>
+<body  ><!--background="image3.jpg" -->
+<div class="main_container" >
+    <div >
+        <h3>欢迎登录</h3>
+
+    </div>
+    <div th:text="${msg}">
+
+    </div>
+    <div>
+        <form action="/user/login" method="post">
+            用户名:<input name="username" type="text" placeholder="请输入用户名" style="width: 200px;height:25px;border-radius: 10px;color: black;"  maxlength="20" minlength="1"/><br>
+
+            密&nbsp&nbsp码:<input name="password" type="password" placeholder="请输入用户密码" style="width: 200px;height:25px;border-radius: 10px;color: black"  maxlength="20" minlength="1"> <br>
+
+            <input type="submit" value="登录">
+            <input type="button" value="注册" onclick=javascrtpt:jump()>
+        </form>
+    </div>
+
+</div>
+
+
+
+</body>

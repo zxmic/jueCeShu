@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>download</title>
+    <script type="text/javascript">
+        function f() {
+            var node = [[${node}]];
+            document.write(node.forEach());
+        }
+
+    </script>
+    <style>
+        .main_container{
+            width: 760px;
+            height: auto;
+            margin: auto;
+            padding-top: 10%;
+        }
+
+
+        table {margin: auto;height: auto}
+        body{
+            text-align: center;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+
+    </style>
+</head>
+<body>
+<div th:text="${msg}">
+</div>
+<div>
+    <form action="/file/download" method="post">
+        <input type="button" name="button" value="点击下载测试结果文件">
+
+
+    </form>
+</div>
+</body>
+</html>
